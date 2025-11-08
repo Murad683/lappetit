@@ -5,26 +5,48 @@
 /* Base */
 html, body {
   background: theme('colors.cream');
-  color: theme('colors.coffee');
+  color: theme('colors.navy');
 }
 
 /* Container with wide breathing room */
 .container { @apply mx-auto px-6 md:px-10 lg:px-16; }
 
 /* Typographic rhythm */
-h1 { @apply text-3xl md:text-5xl font-bold tracking-tight; }
-h2 { @apply text-[22px] md:text-2xl font-semibold; }
+h1 { @apply text-3xl md:text-5xl font-bold tracking-tight text-navy; }
+h2 { @apply text-[22px] md:text-2xl font-semibold text-navy; }
 p  { @apply leading-relaxed; }
+/* Ensure all headings pick navy */
+h3, h4 { @apply text-navy; }
+
+/* Text links (content areas) */
+main :where(a):not(.btn) { @apply text-navy; }
+main :where(a):not(.btn):hover { @apply underline; }
+
+/* On dark navy surfaces, make headings light for contrast */
+.bg-navy :where(h1,h2,h3,h4) { @apply text-cream; }
+
+/* Chips */
+.chip { @apply inline-flex items-center rounded-full px-3 py-1.5 text-sm border transition-all duration-200 ease-out; }
+.chip-active { @apply bg-accent text-navy border-line shadow-sm; }
+.chip-inactive { @apply bg-transparent border-line text-navy hover:bg-accent/40; }
 
 /* Buttons */
-.btn { @apply inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-semibold transition hover:opacity-90; }
-.btn-primary { @apply bg-orange text-white; }
-.btn-outline { @apply border border-orange text-orange; }
+.btn { @apply inline-flex items-center justify-center rounded-full px-6 py-3 text-sm md:text-base font-semibold transition-all duration-200 ease-out; }
+.btn:hover { @apply -translate-y-0.5 shadow-md; }
+.btn-primary { @apply bg-primaryBtn text-white hover:bg-primaryBtnHover; }
+.btn-outline { @apply border border-line text-navy bg-white hover:bg-accent/40; }
 
 /* Cards */
-.card { @apply rounded-2xl shadow-sm bg-white/90 backdrop-blur p-5 md:p-6 ring-1 ring-beige/50; }
+.card { @apply rounded-2xl bg-white p-6 md:p-7 ring-1 ring-line/80 shadow-sm transition-all duration-200 ease-out; }
+.card:hover { @apply -translate-y-0.5 shadow-md ring-line; }
+
+/* Inputs */
+.input { @apply w-full rounded-xl border border-line bg-white px-4 py-3 ring-1 ring-line placeholder:text-line/90; }
+
+/* Muted text helper */
+.muted { @apply text-line; }
 
 /* Focus states (a11y) */
 :where(a, button, input, textarea, select) {
-  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange focus-visible:ring-offset-2 focus-visible:ring-offset-cream;
+  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-line focus-visible:ring-offset-2 focus-visible:ring-offset-cream;
 }

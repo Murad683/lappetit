@@ -19,7 +19,7 @@ export default function LanguageSwitcher(){
       {langs.map(l => (
         <button key={l.code}
           onClick={()=>setLang(l.code)}
-          className={`px-2 py-1 text-xs rounded ${current===l.code ? 'bg-orange text-white':'bg-white/10 text-cream'}`}>
+          className={`px-2 py-1 text-xs rounded-full ${current===l.code ? 'bg-primaryBtn text-white':'bg-white/10 text-cream'}`}>
           {l.label}
         </button>
       ))}

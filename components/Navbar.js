@@ -25,10 +25,10 @@ export default function Navbar(){
         </Link>
 
         <nav className="hidden md:flex items-center gap-6" aria-label="Primary">
-          <Link href="/menu" className="hover:text-orange rounded-md px-1">{t('menu', lang)}</Link>
-          <Link href="/branches" className="hover:text-orange rounded-md px-1">{t('branches', lang)}</Link>
-          <Link href="/about" className="hover:text-orange rounded-md px-1">{t('about', lang)}</Link>
-          <Link href="/contact" className="hover:text-orange rounded-md px-1">{t('contact', lang)}</Link>
+          <Link href="/menu" className="rounded-md px-1 hover:text-cream/80">{t('menu', lang)}</Link>
+          <Link href="/branches" className="rounded-md px-1 hover:text-cream/80">{t('branches', lang)}</Link>
+          <Link href="/about" className="rounded-md px-1 hover:text-cream/80">{t('about', lang)}</Link>
+          <Link href="/contact" className="rounded-md px-1 hover:text-cream/80">{t('contact', lang)}</Link>
         </nav>
 
         <div className="hidden md:flex items-center gap-2">
@@ -63,13 +63,13 @@ export default function Navbar(){
       {/* Mobile panel */}
       <div
         id="mobile-menu"
-        className={`md:hidden absolute left-0 right-0 top-full z-50 origin-top transition duration-200 ${open ? 'opacity-100 scale-y-100' : 'pointer-events-none opacity-0 scale-y-95'} bg-cream text-coffee ring-1 ring-beige shadow-lg`}
+        className={`md:hidden absolute left-0 right-0 top-full z-50 origin-top transition duration-200 ${open ? 'opacity-100 scale-y-100' : 'pointer-events-none opacity-0 scale-y-95'} bg-cream text-navy ring-1 ring-line shadow-lg`}
       >
         <div className="container py-4 flex flex-col">
-          <Link href="/menu" className="px-3 py-3 rounded hover:bg-orange/10" onClick={()=>setOpen(false)}>{t('menu', lang)}</Link>
-          <Link href="/branches" className="px-3 py-3 rounded hover:bg-orange/10" onClick={()=>setOpen(false)}>{t('branches', lang)}</Link>
-          <Link href="/about" className="px-3 py-3 rounded hover:bg-orange/10" onClick={()=>setOpen(false)}>{t('about', lang)}</Link>
-          <Link href="/contact" className="px-3 py-3 rounded hover:bg-orange/10" onClick={()=>setOpen(false)}>{t('contact', lang)}</Link>
+          <Link href="/menu" className="px-3 py-3 rounded hover:bg-accent/40" onClick={()=>setOpen(false)}>{t('menu', lang)}</Link>
+          <Link href="/branches" className="px-3 py-3 rounded hover:bg-accent/40" onClick={()=>setOpen(false)}>{t('branches', lang)}</Link>
+          <Link href="/about" className="px-3 py-3 rounded hover:bg-accent/40" onClick={()=>setOpen(false)}>{t('about', lang)}</Link>
+          <Link href="/contact" className="px-3 py-3 rounded hover:bg-accent/40" onClick={()=>setOpen(false)}>{t('contact', lang)}</Link>
           <div className="mt-3 flex items-center gap-2 px-3">
             <LanguageSwitcher />
             <Link href="/menu" className="btn btn-primary flex-1 text-center" onClick={()=>setOpen(false)}>{t('seeMenu', lang)}</Link>

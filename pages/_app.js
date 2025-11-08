@@ -20,9 +20,9 @@ export default function App({ Component, pageProps }) {
         <meta property="og:description" content="Kruassanlar, mini sendviçlər, party setlər — Bakıda çatdırılma ilə." />
         <meta property="og:type" content="website" />
       </Head>
-      <div className={`${poppins.variable} ${lato.variable} font-sans min-h-screen flex flex-col bg-cream text-coffee`} style={{fontFamily: 'var(--font-body)'}}>
+      <div className={`${poppins.variable} ${lato.variable} font-sans min-h-screen flex flex-col bg-cream text-navy`} style={{fontFamily: 'var(--font-body)'}}>
         <Navbar />
-        <main className="container flex-1 py-10 md:py-16">
+        <main className="container flex-1 py-16 md:py-20">
           <Component {...pageProps} />
         </main>
         <Footer />

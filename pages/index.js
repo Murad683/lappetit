@@ -21,8 +21,8 @@ export default function Home(){
       <Head>
         <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(schema)}} />
       </Head>
-      <div className="space-y-10 md:space-y-14">
-        <section className="rounded-3xl bg-navy text-cream p-8 md:p-12 flex flex-col md:flex-row md:items-center gap-8">
+      <div className="space-y-14 md:space-y-20">
+        <section className="rounded-3xl bg-navy text-cream p-10 md:p-16 flex flex-col md:flex-row md:items-center gap-8">
           <div className="flex-1">
             <h1 className="mb-3">Hər səhər təzə dad, Lappetit-də.</h1>
             <p className="opacity-90 mb-6">Korporativ, fərdi və party setlər — bir kliklə.</p>
@@ -46,7 +46,7 @@ export default function Home(){
         <section className="grid md:grid-cols-2 gap-8">
           <div className="card group">
             <div className="flex items-start gap-4">
-              <span className="shrink-0 p-3 rounded-xl bg-orange/10 text-orange ring-1 ring-orange/20">
+              <span className="shrink-0 p-3 rounded-xl bg-accent text-navy ring-1 ring-line">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <path d="M21 16V8a2 2 0 0 0-2-2h-4l-2-2-2 2H7a2 2 0 0 0-2 2v8" />
                   <rect x="3" y="8" width="18" height="10" rx="2" ry="2" />
@@ -61,7 +61,7 @@ export default function Home(){
 
           <div className="card group">
             <div className="flex items-start gap-4">
-              <span className="shrink-0 p-3 rounded-xl bg-orange/10 text-orange ring-1 ring-orange/20">
+              <span className="shrink-0 p-3 rounded-xl bg-accent text-navy ring-1 ring-line">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
                   <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />

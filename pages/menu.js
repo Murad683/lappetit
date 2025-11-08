@@ -15,13 +15,13 @@ export default function Menu(){
   }, [cat])
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-8 md:space-y-10">
       <h1 className="text-2xl font-semibold">Menyu</h1>
 
       <div className="flex flex-wrap gap-2">
         {cats.map(c => (
           <button key={c} onClick={()=>setCat(c)}
-            className={`px-3 py-1.5 rounded-full text-sm ${c===cat ? 'bg-orange text-white':'bg-beige text-coffee'}`}>
+            className={`chip ${c===cat ? 'chip-active' : 'chip-inactive'}`}>
             {c}
           </button>
         ))}
