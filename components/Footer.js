@@ -19,7 +19,7 @@ export default function Footer(){
         </div>
       </div>
       <div className="border-t border-line">
-        <div className="container py-4 text-sm opacity-70">© {new Date().getFullYear()} Lappetit. All rights reserved.</div>
+        <div className="container py-4 text-sm opacity-70">© {new Date().getFullYear()} Lappetit. All rights reserved. <a href="tel:+994505131380" className="underline hover:opacity-100">Created By Revio.az</a></div>
       </div>
     </footer>
   )
