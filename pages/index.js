@@ -32,7 +32,7 @@ export default function Home(){
             </div>
           </div>
           <div className="flex-1">
-            <img src="/assets/products/product (4).jpg" alt="Lappetit hero" className="rounded-2xl object-cover h-72 w-full"/>
+            <img src="/assets/products/croissant2.jpg" alt="Lappetit hero" className="rounded-2xl object-cover h-72 w-full"/>
           </div>
         </section>
 
